@@ -1,0 +1,5 @@
+export const GIT_REPO_REQUEST = 'GIT_REPO_REQUEST';
+export const GIT_REPO_SUCCESS = 'GIT_REPO_SUCCESS';
+export const GIT_REPO_FAILURE = 'GIT_REPO_FAILURE';
+
+
