@@ -4,6 +4,7 @@ const initState = {
   isLoading: false,
   isError: false,
   repository: [],
+  followers: [],
 };
 
 const reducer = (state = initState, { type, payload }) => {
@@ -27,7 +28,31 @@ const reducer = (state = initState, { type, payload }) => {
         isLoading: false,
         isError: true,
       };
+
+    // followers
+    case types.GIT_FOLLOWERS_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case types.GIT_FOLLOWERS_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        followers: payload,
+      };
+
+    case types.GIT_FOLLOWERS_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
     default:
       return state;
   }
 };
+
+export { reducer };

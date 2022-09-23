@@ -1,5 +1,5 @@
-import Rounting from './Pages/Rounting';
-
+import Rounting from './components/Rounting';
+import "./App.css"
 function App() {
   return (
     <div className='App'>
